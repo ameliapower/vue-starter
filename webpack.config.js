@@ -88,12 +88,12 @@ module.exports = {
    }, //modules
    resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      // 'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.js'
     }
    },
    plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack Starter',
       template: './src/index.html'
     }),
     new CopyWebpackPlugin([{
@@ -102,7 +102,7 @@ module.exports = {
     }]),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('production')
+        NODE_ENV: JSON.stringify('development')
       }
     })
    ] //plugins
